@@ -1,0 +1,210 @@
+/* Overlay to disable background interactions */
+.taskFormOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  pointer-events: auto;
+}
+
+.taskFormContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 50%;
+  z-index: 100;
+  gap: 1rem;
+}
+
+
+.taskFormContainer div {
+  width: 100%;
+}
+
+.taskFormContainer input[type="text"],
+.taskFormContainer textarea,
+.taskFormContainer input[type="date"],
+.taskFormContainer button {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensure padding doesn't exceed element width */
+}
+
+.taskFormContainer input,
+.taskFormContainer textarea {
+  border: 1px solid #ccc;
+  transition: border 0.3s ease;
+}
+
+.taskFormContainer input:focus,
+.taskFormContainer textarea:focus,
+.taskFormContainer input[type="date"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.taskFormContainer textarea {
+  resize: none;
+  height: 100px;
+}
+
+.btn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.addBtn {
+  background-color: #007bff;
+}
+
+.addBtn:hover {
+  background-color: #0056b3;
+}
+
+.closeBtn {
+  background-color: red;
+}
+
+.closeBtn:hover {
+  background-color: rgb(123, 7, 7);
+}
+
+/* Styling for task list */
+.searchBarContainer {
+    border: 1px solid gray;
+    border-radius: 1.2rem;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 0.8rem;
+    margin: 2rem auto;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search {
+    font-size: 1rem;
+    flex-grow: 1;
+    border: none;
+    padding: 0.4rem;
+    margin-right: 0.5rem;
+}
+
+.search:focus {
+    outline: none;
+    border: none;
+}
+
+.searchBarContainer img {
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.filterContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* Styling for task list */
+.taskListContainer {
+  width: 90%;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: black;
+  min-width: 700px;
+}
+
+th, td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+button.toggle {
+  background-color: #007bff;
+  color: white;
+}
+
+button.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.edit {
+  background-color: #28a745;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 700px) {
+  .taskListContainer {
+      overflow-x: auto;
+  }
+  
+  table {
+      min-width: 600px;
+  }
+}

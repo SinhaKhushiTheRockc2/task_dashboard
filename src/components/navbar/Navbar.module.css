@@ -1,0 +1,41 @@
+.header{
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 3px 3px 3px gray;
+    background-color: rgb(243, 243, 243);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.logo img{
+    border-radius: 50%;
+}
+
+.logo img:hover{
+    transition: 0.5s ease-in-out;
+    transform: scale(1.2);
+}
+/* Responsivity */
+@media screen and (max-width:500px){
+    .logo img{
+        height: 2rem;
+        width: 2rem;
+    }
+}
+/* For small devices */
+@media screen and (min-width:640px){
+    .header{
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
