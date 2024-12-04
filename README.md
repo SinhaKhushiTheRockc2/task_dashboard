@@ -3,7 +3,7 @@ Devloped this Task-Dashboard which allows users to manage their tasks efficientl
 
 
 ## Hosted Link:
-### 
+### https://sinhakhushitherockc2.github.io/task_dashboard/
 
 ## Features
 * ADD TASK: Allows users to add task with title, description, due-date.
